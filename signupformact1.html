@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up for Military</title>
+        <link rel="icon" href="C:\Users\P-Owner\Documents\BSIT 1C\2nd sem\Major Subjects\Web development\soldiertransparent.png">
+
+    </head>
+    
+    <style>
+        body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.5;
+    margin: 30px;
+    background-color: rgb(9, 36, 36);
+    display: flex;
+    flex-direction: row;
+    
+    }
+    span{
+    position: absolute;
+    display: block;
+    }
+    span:nth-child(1){
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,#03e9f4);
+        animation: animate1 2s infinite;
+    }
+    @keyframes animate1{
+        0%{
+            left:-100%;
+        }
+        100%{
+            left: 100%;
+        }
+    }
+    span:nth-child(2){
+        top:-100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,#03e9f4);
+        animation: animate2 2s infinite;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate2{
+        0%{
+            top:-100%;
+        }
+        100%{
+            top: 100%;
+        }
+    }
+    span:nth-child(3){
+        bottom:0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,#03e9f4);
+        animation: animate3 2s infinite;
+        animation-delay: 1s;
+    }
+    @keyframes animate3{
+        0%{
+            right:-100%;
+        }
+        100%{
+            right: 100%;
+        }
+    }
+    span:nth-child(4){
+        bottom:-100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,#03e9f4);
+        animation: animate4 2s infinite;
+        animation-delay: 1.5s;
+    }
+    @keyframes animate4{
+        0%{
+            bottom:-100%;
+        }
+        100%{
+            bottom: 100%;
+        }
+    }
+    .image{
+        height: 00px;
+    }
+    .image img{
+        height: 700px;
+        margin-left: 50px;
+    }
+    #survey-form {
+        margin-top: 100px;
+        margin-left: 50px;
+        max-width: 600px;
+        background-color: rgb(20, 57, 57);
+        padding: 50px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .left-right-container{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    fieldset {
+        margin-bottom: 15px;
+    }
+    #hobbies{
+        margin-bottom: 30px;
+    }
+    h1,
+    p {
+        text-align: center;
+        
+    }
+
+    input[type="email"],
+    input[type="number"],
+    input[type="text"],
+    select,
+    textarea {
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background: transparent;
+        color: white;
+        border-bottom: solid 1px aqua;
+    }
+    input[type="email"]::placeholder,
+    input[type="number"]::placeholder,
+    input[type="text"]::placeholder,
+    select::placeholder,
+    textarea::placeholder{
+        color: white;
+    }
+    #age{
+        margin-bottom: 45px;
+    }
+    #bio{
+        height: 100px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    #submit {
+        background-color: #0060df;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    #submit:hover {
+        background-color: #2374ff;
+    }
+    @media screen and (max-width:600px) {
+        .image img{
+        height: 300px;
+        
+    }
+    }
+    @media screen and (max-width:1100px){
+        body {
+        font-family: "Segoe UI", sans-serif;
+        line-height: 1.5;
+        margin: 30px;
+        background-color: rgb(9, 36, 36);
+        display: flex;
+        flex-direction: column;
+        
+        }
+        #survey-form{
+            position: relative;
+            
+        }
+        .image img{
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 40%;
+        
+        }
+        .left-right-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        
+        }
+    }
+    </style>
+    <body>
+        
+        <div class="image">
+            <img src="soldiertransparent.png" alt="">
+        </div>
+        
+        <form id="survey-form">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <h1>Sign Up</h1>
+            <div class="left-right-container">
+            <div class="left">
+            <label id="name-label">Name:</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            />
+
+            <label id="email-label">Email:</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            />
+
+            <label id="age-label">Age:</label>
+            <input
+                type="number"
+                id="age"
+                placeholder="Enter your age"
+                min="1"
+                max="100"
+                required
+            />
+
+            <fieldset>
+                <legend>Course:</legend>
+                <label>
+                    <input
+                        type="radio"
+                        id="radio1"
+                        name="radioGroup"
+                        value="radio1"
+                    />
+                    Bachelor of Science in Information Technology
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        id="radio2"
+                        name="radioGroup"
+                        value="radio2"
+                    />
+                    Bachelor of Secondary Education
+                </label>
+            </fieldset>
+            </div>
+
+        <div class="right">
+            <label>Gender:</label>
+            <select id="dropdown">
+                <option value="option1">Male</option>
+                <option value="option2">Female</option>
+            </select>
+
+            <fieldset id="hobbies">
+                <legend>Hobbies:</legend>
+                <label>
+                    <input type="checkbox" id="checkbox1" value="checkbox1" />
+                    Gaming
+                </label>
+
+                <label>
+                    <input type="checkbox" id="checkbox2" value="checkbox2" />
+                    Music
+                </label>
+
+                <label>
+                    <input type="checkbox" id="checkbox3" value="checkbox3" />
+                    Sports
+                </label>
+            </fieldset>
+
+            <label>Why do you want to join?</label>
+            <textarea id="bio" placeholder="Enter your sincere reason"></textarea>
+        </div>
+        </div>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </body>
+</html>
